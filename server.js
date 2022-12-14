@@ -4,7 +4,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import Users from "./models/users.js";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -14,7 +13,8 @@ dotenv.config();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://e-commerce-store-delta.vercel.app",
+    // origin: "https://e-commerce-store-delta.vercel.app",
+    origin: "*",
   })
 );
 
@@ -45,28 +45,6 @@ app.post("/order", async (req, res) => {
     res.status(500).send({ message: error });
   }
 });
-
-// app.post("/prods", async (req, res) => {
-//   try {
-//     const { email } = req.body;
-//     const user = await Users.findOne({ email });
-//     res.send(user);
-//   } catch (error) {
-//     res.send(error);
-//   }
-// });
-
-// app.get("/cart", async (req, res) => {
-//   try {
-//     const { email } = req.body;
-
-//     const user = await Users.findOne({ email });
-
-//     res.send(user.token);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// });
 
 app.post("/addToCart", async (req, res) => {
   const { email, order } = req.body;
