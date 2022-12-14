@@ -14,7 +14,7 @@ dotenv.config();
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://backend-ucqv.onrender.com",
   })
 );
 
