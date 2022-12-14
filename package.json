@@ -2,7 +2,6 @@
   "name": "e-commerse_backend",
   "version": "1.0.0",
   "description": "",
-  "proxy": "https://backend-ucqv.onrender.com",
   "main": "server.js",
   "type": "module",
   "scripts": {

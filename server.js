@@ -13,8 +13,8 @@ dotenv.config();
 app.use(express.json());
 app.use(
   cors({
-    // origin: "https://e-commerce-store-delta.vercel.app",
-    origin: "*",
+    origin: "https://e-commerce-store-delta.vercel.app",
+    // origin: "*",
   })
 );
 
