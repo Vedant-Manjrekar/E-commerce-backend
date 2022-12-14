@@ -14,7 +14,7 @@ dotenv.config();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://backend-ucqv.onrender.com",
+    origin: "https://e-commerce-store-delta.vercel.app/",
   })
 );
 
