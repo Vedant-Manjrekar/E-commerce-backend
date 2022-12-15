@@ -14,8 +14,8 @@ const connectURL =
 app.use(express.json());
 app.use(
   cors({
-    // origin: "https://e-commerce-store-delta.vercel.app",
-    origin: "*",
+    origin: "https://e-commerce-store-delta.vercel.app",
+    // origin: "*",
     credentials: true, //access-control-allow-credentials:true
   })
 );
