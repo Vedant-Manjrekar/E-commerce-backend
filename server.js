@@ -19,7 +19,7 @@ app.use(
   })
 );
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(String(process.env.DATABASE_URL), {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
