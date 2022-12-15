@@ -7,7 +7,8 @@ import Users from "./models/users.js";
 import bcrypt from "bcryptjs";
 const app = express();
 const port = process.env.PORT || 3000;
-const connectURL = process.env.DATABASE_URL;
+const connectURL =
+  "mongodb+srv://e-commerce-website:zFebnhu1pFNevU90@cluster0.4bdkjq9.mongodb.net/?retryWrites=true&w=majority";
 
 // * Middlewares
 app.use(express.json());
