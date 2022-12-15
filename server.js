@@ -1,13 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+dotenv.config();
 import cors from "cors";
 import Users from "./models/users.js";
 import bcrypt from "bcryptjs";
 const app = express();
 const port = process.env.PORT || 3000;
-
-dotenv.config();
+const connectURL = process.env.DATABASE_URL;
 
 // * Middlewares
 app.use(express.json());
@@ -18,8 +18,6 @@ app.use(
     credentials: true, //access-control-allow-credentials:true
   })
 );
-
-const connectURL = process.env.DATABASE_URL;
 
 mongoose.connect(connectURL, {
   useNewUrlParser: true,
