@@ -16,7 +16,6 @@ app.use(
     // origin: "https://e-commerce-store-delta.vercel.app",
     origin: "*",
     credentials: true, //access-control-allow-credentials:true
-    optionSuccessStatus: 200,
   })
 );
 
@@ -157,6 +156,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Listening on port ${port}`);
 });
