@@ -156,6 +156,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
