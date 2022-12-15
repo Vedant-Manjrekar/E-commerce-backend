@@ -148,12 +148,12 @@ app.post("/login", async (req, res) => {
   if (userEmail) {
     const isUser = await bcrypt.compare(password, userEmail.password);
     if (isUser == true) {
-      res.status(200).send(userEmail);
+      res.send(userEmail);
     } else {
       res.status(404).send("Incorrect email or password");
     }
   } else {
-    res.send("User not found");
+    res.status(404).send("User not found");
   }
 });
 
