@@ -26,17 +26,6 @@ mongoose.connect(connectURL, {
 });
 const db = mongoose.connection;
 
-// Path to the static React build directory
-const frontend = path.join(__dirname, "e-commerce_website");
-
-// Map the requests to the static React build directory
-app.use("/", express.static(frontend));
-
-// All the unknown requests are redirected to the React SPA
-app.use(function (req, res, next) {
-  res.sendFile(path.join(frontend, "index.html"));
-});
-
 // // what database to do when faced with an error.
 db.on("error", (error) => {
   console.error(error);
