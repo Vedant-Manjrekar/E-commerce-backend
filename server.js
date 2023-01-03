@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-dotenv.config({ path: "e-commerse_backend/.env" });
+dotenv.config();
 import cors from "cors";
 import Users from "./models/users.js";
 import bcrypt from "bcryptjs";
@@ -20,8 +20,9 @@ app.use(
 );
 
 mongoose.connect(connectURL, {
-  useNewUrlParser: true,
   useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true,
 });
 const db = mongoose.connection;
 
