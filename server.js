@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: ".env" });
 import cors from "cors";
 import Users from "./models/users.js";
 import bcrypt from "bcryptjs";
