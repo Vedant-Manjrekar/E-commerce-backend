@@ -7,7 +7,6 @@ import Users from "./models/users.js";
 import bcrypt from "bcryptjs";
 const app = express();
 const port = process.env.PORT || 3000;
-const connectURL = process.env.DATABASE_URL;
 
 // * Middlewares
 app.use(express.json());
