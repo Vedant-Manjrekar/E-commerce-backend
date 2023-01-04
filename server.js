@@ -18,8 +18,6 @@ app.use(
   })
 );
 
-console.log("URI", process.env.DATABASE_URL);
-
 mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
