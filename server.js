@@ -18,9 +18,10 @@ app.use(
   })
 );
 
-console.log("URI", process.env.DATABASE_URL);
+console.log("URI", process.env.REACT_APP_DATABASE_URL);
+// console.log(dotenv.config());
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.REACT_APP_DATABASE_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
