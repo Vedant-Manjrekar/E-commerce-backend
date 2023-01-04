@@ -24,6 +24,7 @@ mongoose.connect(process.env.DATABASE_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
+
 const db = mongoose.connection;
 
 // // what database to do when faced with an error.
